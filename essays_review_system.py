@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 import operator
 
 from langchain_openai import ChatOpenAI
-
+from IPython.display import Image,display
 load_dotenv() #load the openai_keys
 
 model = ChatOpenAI() # load the model
@@ -90,6 +90,8 @@ graph.add_edge("evaluate_analysis","final_evaluation")
 graph.add_edge("final_evaluation", END)
 
 workflow = graph.compile()
+
+
 
 initial_state = {"essay": essay}
 
