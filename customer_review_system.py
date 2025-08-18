@@ -80,6 +80,7 @@ graph.add_node("negative_responce",negative_responce)
 
 graph.add_edge(START, "sentiment_analysis")
 graph.add_conditional_edges("sentiment_analysis",check_sentiment)
+
 graph.add_edge("Positive_responce",END)
 graph.add_edge("run_diagnosis","negative_responce")
 

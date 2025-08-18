@@ -7,7 +7,8 @@ from langgraph.graph.message import add_messages
 from langgraph.checkpoint.memory import MemorySaver
 
 from typing import TypedDict, Annotated, Literal
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Fieldclear
+
 import operator
 
 from langchain_openai import ChatOpenAI
@@ -52,7 +53,7 @@ while True:
         break
 
     config = {"configurable": {"thread_id": thread_id}}
-    responce = chatBot.invoke({"message":[SystemMessage(content="I am Vishal's assistant"),HumanMessage(content=user_input)]},config=config)
+    responce = chatBot.invoke({"message":[SystemMessage(content="I am Tejas's assistant"),HumanMessage(content=user_input)]},config=config)
 
     print("AI:", responce["message"][-1].content)
 
